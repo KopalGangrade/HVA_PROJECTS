@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ------------------------header---------------------------*/
+
+body{
+    background-image: linear-gradient(rgb(171, 98, 235) , rgb(249, 241, 249));
+}
+
+header{
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    color: white;
+    margin: 3vw;
+}
+
+.sign{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5vw;
+    gap: 1vw;
+}
+
+.btn{
+    width: 8vw;
+    height: 5.6vh;
+    border: 2px solid rgb(220, 212, 212);
+}
+
+
+#signup{
+    padding-left: 1.2vw;
+    cursor: pointer;
+}
+
+#signup:hover{
+    background-color: grey;
+}
+
+#login{
+    padding-left: 1.7vw;
+    cursor: pointer;
+}
+
+/* ================================================================== */
+
+/* -------------------main------------------------- */
+
+
+
+main{
+    height: 80vh;
+}
+
+.heading{
+    color: rgb(193, 26, 14);
+    font-size: 2.4rem;
+    padding-top: 14vh;
+    padding-left: 25vw;
+}
+
+
+/* .searchbar{
+    padding-top: 11vh;
+    padding-left: 40vw;
+}
+
+.searchbar #search{
+    height: 3rem;
+    width: 16rem;
+    border-radius: 10px;
+    padding-left: 1vw;
+} */
+
+.searchbar{
+    width: 400px;
+    background: #f6f5f5;
+    margin: 80px auto 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 1px 7px;
+}
+
+
+input{
+    flex: 1;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: rgb(16, 15, 15);
+    font-size: 18px;
+}
+
+
+button{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    color: rgb(18, 17, 18);
+    font-weight: 700;
+}
+
+.result-box{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+
+
+
+#para{
+    padding-top: 9vh;
+    margin-left: 26vw;
+    margin-right: 27vw;
+    word-wrap: break-word;
+}
+
+
+#break{
+    padding-left: 5vw;
+}
+
+#explore{
+    padding-top: 8vh;
+}
+
+#more{
+    margin-left: 45vw;
+    padding-bottom: 10vh;
+    padding: 1vh;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#more:hover{
+    background-color: #a9aa95;
+}
+/* ------------------------------------------------------------ */
+
+/* ------------------footer------------------------- */
+
+footer{
+    background-color: rgb(139, 64, 238);
+    height: 7.9vh;
+    display: flex;
+    align-items: center;
+}
+
+#follow{
+    padding-left: 2vw;
+}
+
+i{
+    padding-left: 2vw;
+}
+
+
+ /* media  */
+
+ /* Your existing CSS */
+
+@media only screen and (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+    main {
+        padding: 10px;
+    }
+
+    .heading {
+        padding-left: 10px;
+    }
+
+    /* Add more styles as needed for smaller screens */
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for screens between 769px and 1024px wide */
+    main {
+        padding: 20px;
+    }
+
+    .heading {
+        padding-left: 20px;
+    }
+
+    /* Add more styles as needed for medium-sized screens */
+}
+
+/* Add more media queries for larger screens if necessary */
+
+/* Your existing CSS for larger screens */
+
+/* Your existing CSS */
+
+/* Media Query for iPhones */
+@media only screen and (max-width: 375px) {
+    header {
+        height: 20vh;
+    }
+
+    #logo {
+        font-size: 1.5rem;
+    }
+
+    .sign {
+        margin-right: 2vw;
+    }
+
+    .btn {
+        width: 6vw;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .heading {
+        font-size: 1.8rem;
+        padding-left: 10px;
+    }
+
+    .searchbar {
+        width: 90%;
+    }
+
+    #para {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    #explore {
+        padding-top: 5vh;
+    }
+
+    #more {
+        margin-left: 35vw;
+    }
+}
+
+/* Your existing CSS for other screen sizes */
+

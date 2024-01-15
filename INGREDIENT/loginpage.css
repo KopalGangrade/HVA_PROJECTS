@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.box{
+    width: 25vw;
+    height: 50vh;
+    border: 2px solid black;
+    margin-left: 40vw;
+    margin-top: 20vh;
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(171, 98, 235) , rgb(162, 165, 180));
+}
+
+.info{
+    margin-left: 3vw;
+    margin-top: 6vh;
+    height: 2.5em;
+    width: 17em;
+    padding-left: 1vw;
+}
+
+h4{
+    padding-top: 3vh;
+    padding-left: 7vw;
+}
+
+
+.button{
+    padding-left: 9vw;
+    padding-top: 4vh;
+}
+
+h3{
+    padding-top: 2vh;
+    padding-left: 2.5vw;
+}
