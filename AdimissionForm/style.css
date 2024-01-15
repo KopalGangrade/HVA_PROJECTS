@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    border: 2px solid black;
+    width: 65vw;
+    margin-left: 180px;
+}
+
+#container{
+    background-color: rgb(115, 149, 208);
+}
+
+form{
+    padding-left: 50px;
+    /* padding-bottom:20px ; */
+    /* background-color: rgb(191, 241, 225); */
+
+}
+
+#form{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.Sname{
+    margin-top: 90px;
+}
+
+.Pname{
+    margin-top: 10px;
+}
+
+.input{
+    padding-left: 10px;
+}
+.box-size{
+    width: 200px;
+    height: 25px;
+    margin-left: 30px;
+}
+
+.label{
+    padding-right:30px ;
+}
+
+.space{
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+
+.btn{
+    padding-left: 25vw;
+    cursor: pointer;
+}
+
+#button{
+    height: 7vh;
+    width: 15vw;
+    border-radius: 5px;
+}
+
+#button:hover{
+    background-color: cadetblue;
+}
+
+
+
+

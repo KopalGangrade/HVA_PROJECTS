@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <!-- <form action="submit Application" onsubmit="return button()" method="post"> -->
+            <form id="admissionForm" action="/submit" method="post"></form>
+            <h1 id="form">School Addmission Form</h1>
+            <div class="Sname space">
+                <label class="label">Student Name</label>
+                    <input type="text" placeholder="First Name..." class="box-size input" required>
+                    <input type="text" placeholder="Last Name..." class="box-size input" required>
+            </div>
+            <div class="Pname space">
+                <label class="label">Guardian Name</label>
+                    <input type="text" placeholder="First Name..." class="box-size input" required>
+                    <input type="text" placeholder="Last Name..." class="box-size input" required>
+            </div>
+            <div class="space">
+                <label class="label">Date Of Birth</label>
+                <input type="date" value="" class="box-size">
+            </div>
+            <div class="space">
+                <label class="label">Gender</label>
+                <label for="">Male</label>
+                <input type="checkbox" value="Gender" class="" required>
+                <label for="">Female</label>
+                <input type="checkbox" value="Gender" class="" required>
+            </div>
+            <div class="space">
+                <label class="label">Residential Address</label>
+                <textarea name="" id="" cols="70" rows="2"></textarea>
+            </div>
+            <div class="space">
+                <label class="label">Standard in which pupil was studying</label>
+                <select name="" class="box-size" required>
+                    <option value="">Choose</option>
+                    <option value="">nursery</option>
+                    <option value="">KG.1</option>
+                    <option value="">KG.2</option>
+                    <option value="">1st</option>
+                    <option value="">2nd</option>
+                    <option value="">3rd</option>
+                    <option value="">4th</option>
+                    <option value="">5th</option>
+                    <option value="">6th</option>
+                    <option value="">7th</option>
+                    <option value="">8th</option>
+                    <option value="">9th</option>
+                    <option value="">10th</option>
+                    <option value="">11th</option>
+                    <option value="">12th</option>
+                </select>
+            </div>
+            <div class="space">
+                <label class="label">Standard in which admission is sought</label>
+                <select name="" class="box-size">
+                    <option value="">Choose</option>
+                    <option value="">nursery</option>
+                    <option value="">KG.1</option>
+                    <option value="">KG.2</option>
+                    <option value="">1st</option>
+                    <option value="">2nd</option>
+                    <option value="">3rd</option>
+                    <option value="">4th</option>
+                    <option value="">5th</option>
+                    <option value="">6th</option>
+                    <option value="">7th</option>
+                    <option value="">8th</option>
+                    <option value="">9th</option>
+                    <option value="">10th</option>
+                    <option value="">11th</option>
+                    <option value="">12th</option>
+                </select>
+            </div>
+            <div class="space">
+                <label class="label">Last school result</label>
+                <input type="number" value="" class="box-size">
+            </div>
+            <div class="space">
+                <label class="label">Reason for leaving last school</label>
+                <textarea name="" id="" cols="70" rows="2"></textarea>
+            </div>
+            <div class="space">
+                <label class="label">Attach Scan copy of Leaving Certificate</label>
+                <form action="/action_page.php">
+                    <label for="myfile">Select files:</label>
+                    <input type="file" id="myfile" name="myfile" multiple>
+                </form>
+            </div>
+            <div class="space btn">
+                <!-- <button type="button" id="button">Submit Application</button> -->
+                <input type="submit" value="Submit Application" id="button">
+            </div>
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
+
