@@ -66,7 +66,7 @@ main{
 .heading{
     color: rgb(193, 26, 14);
     font-size: 2.4rem;
-    padding-top: 14vh;
+    padding-top: 12vh;
     padding-left: 25vw;
 }
 
@@ -83,14 +83,16 @@ main{
     padding-left: 1vw;
 } */
 
+
 .searchbar{
     width: 400px;
     background: #f6f5f5;
-    margin: 80px auto 0;
+    margin: 50px auto 0;
     border-radius: 5px;
     display: flex;
     align-items: center;
     padding: 1px 7px;
+    /* margin-bottom: 5vh; */
 }
 
 
@@ -114,9 +116,13 @@ button{
     font-weight: 700;
 }
 
-.result-box{
-    max-height: 300px;
+#result-box{
+    max-height: 50px;
     overflow-y: scroll;
+    padding-left: 45vw;
+    padding-top: 2vh;
+    /* background-color: grey; */
+    margin-top: 0.3vh;
 }
 
 

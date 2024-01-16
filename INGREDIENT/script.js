@@ -41,49 +41,77 @@ btn1.addEventListener("click", function(){
 //   antibiotics:[700,...799]
 // }
 
-const ingredientList = {
-    "flavour enhancer": ["MSG", "Salt", "Sugar"],
-    "color": ["Red", "Yellow", "Green"],
-    "preservatives": ["Sodium benzoate", "Sulfur dioxide"],
-    "antioxidants": ["Vitamin C", "Vitamin E"],
-    "antibiotics": ["Penicillin", "Tetracycline"]
-};
 
-const searchBox = document.getElementById('search');
-const resultContainer = document.getElementById('result-box');
 
-searchBox.addEventListener('input', function () {
-    const searchTerm = searchBox.value.toLowerCase();
-    const results = [];
+// const ingredientList = {
+//     flavorEnhancer: "MSG",
+//     color: "Caramel",
+//     preservatives: "Sodium Benzoate",
+//     antioxidants: "Vitamin C",
+//     antibiotics: "Penicillin"
+// };
 
-    for (const category in ingredientList) {
-        const categoryItems = ingredientList[category];
+// function searchIngredients() {
+//     const searchInput = document.getElementById("searchInput").value.toLowerCase();
+//     const searchResultsDiv = document.getElementById("searchResults");
+//     searchResultsDiv.innerHTML = "";
 
-        const matchingItems = categoryItems.filter(item => item.toLowerCase().includes(searchTerm));
+//     for (const prop in ingredientList) {
+//         const ingredient = ingredientList[prop].toLowerCase();
+//         if (ingredient.includes(searchInput)) {
+//             const resultItem = document.createElement("div");
+//             resultItem.textContent = `${prop}: ${ingredientList[prop]}`;
+//             searchResultsDiv.appendChild(resultItem);
+//         }
+//     }
+// }
+
+
+
+
+// const ingredientList = {
+//     "flavour enhancer": ["MSG", "Salt", "Sugar"],
+//     "color": ["Red", "Yellow", "Green"],
+//     "preservatives": ["Sodium benzoate", "Sulfur dioxide"],
+//     "antioxidants": ["Vitamin C", "Vitamin E"],
+//     "antibiotics": ["Penicillin", "Tetracycline"]
+// };
+
+// const searchBox = document.getElementById('search');
+// const resultContainer = document.getElementById('result-box');
+
+// searchBox.addEventListener('input', function () {
+//     const searchTerm = searchBox.value.toLowerCase();
+//     const results = [];
+
+//     for (const category in ingredientList) {
+//         const categoryItems = ingredientList[category];
+
+//         const matchingItems = categoryItems.filter(item => item.toLowerCase().includes(searchTerm));
         
-        results.push(...matchingItems.map(matchingItem => ({ category, item: matchingItem })));
-    }
+//         results.push(...matchingItems.map(matchingItem => ({ category, item: matchingItem })));
+//     }
 
-    displayResults(results);
-});
+//     displayResults(results);
+// });
 
-function displayResults(results) {
-    resultContainer.innerHTML = '';
+// function displayResults(results) {
+//     resultContainer.innerHTML = '';
 
-    results.forEach(result => {
-        const resultItem = document.createElement('div');
-        resultItem.classList.add('result-item');
-        resultItem.textContent = `${result.category}: ${result.item}`;
+//     results.forEach(result => {
+//         const resultItem = document.createElement('div');
+//         resultItem.classList.add('result-item');
+//         resultItem.textContent = `${result.category}: ${result.item}`;
 
-        resultItem.addEventListener('click', function () {
-            searchBox.value = `${result.category}: ${result.item}`;
-            resultContainer.innerHTML = '';
-        });
+//         resultItem.addEventListener('click', function () {
+//             searchBox.value = `${result.category}: ${result.item}`;
+//             resultContainer.innerHTML = '';
+//         });
 
-        resultContainer.appendChild(resultItem);
-        resultItem.style.display = 'block';
-    });
-}
+//         resultContainer.appendChild(resultItem);
+//         resultItem.style.display = 'block';
+//     });
+// }
 
 
 
