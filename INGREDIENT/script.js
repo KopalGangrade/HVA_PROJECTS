@@ -30,79 +30,6 @@ btn1.addEventListener("click", function(){
 
 // -------------search bar-------------------
 
-// let ingredients =[
-// "css",
-// "js",
-// "python"];
-
-// const resultsbox = document.querySelector('.result-box');
-// const inputbox = document.getElementById('search');
-
-// inputbox.onkeyup = function(){
-//     let result =[];
-//     let input = inputbox.value;
-//     if (input.length){
-//         result = ingredients.filter((keyword)=>{
-//             return keyword.toLowerCase().includes(input.toLowerCase());
-//         });
-//         console.log(result);
-//     }
-//     display(result);
-
-//     if(!result.length){
-//         resultsbox.innerHTML = '';
-//     }
-// }
-
-// function display(result){
-//     const content = result.map((list)=>{
-        
-//         return "<li onclick=selectInput(this)>"+list+"</li>";
-//     });
-//     resultsbox.innerHTML = "<ul>"+content.join('')+"</ul>";
-// }
-
-
-// function selectInput(list){
-//     inputbox.value = list.innerHTML;
-//     resultsbox.innerHTML = '';
-// }
-
-
-// let ingredients = ["css", "js", "python"];
-
-// const resultsbox = document.querySelector('result-box');
-// const inputbox = document.getElementById('search');
-
-// inputbox.addEventListener('input', function () {
-//     let result = [];
-//     let input = inputbox.value;
-    
-//     if (input.length) {
-//         result = ingredients.filter((keyword) => {
-//             return keyword.toLowerCase().includes(input.toLowerCase());
-//         });
-//     }
-
-//     display(result);
-
-//     if (!result.length) {
-//         resultsbox.innerHTML = '';
-//     }
-// });
-
-// function display(result) {
-//     const content = result.map((item) => {
-//         return "<li onclick='selectInput(this)'>" + item + "</li>";
-//     });
-//     resultsbox.innerHTML = "<ul>" + content.join('') + "</ul>";
-// }
-
-// function selectInput(list) {
-//     inputbox.value = list.innerHTML;
-//     resultsbox.innerHTML = '';
-// }
-
 
 // let ingredients = {
 //   food_colours: [...199],
@@ -114,48 +41,51 @@ btn1.addEventListener("click", function(){
 //   antibiotics:[700,...799]
 // }
 
+const ingredientList = {
+    "flavour enhancer": ["MSG", "Salt", "Sugar"],
+    "color": ["Red", "Yellow", "Green"],
+    "preservatives": ["Sodium benzoate", "Sulfur dioxide"],
+    "antioxidants": ["Vitamin C", "Vitamin E"],
+    "antibiotics": ["Penicillin", "Tetracycline"]
+};
 
+const searchBox = document.getElementById('search');
+const resultContainer = document.getElementById('result-box');
 
-const ingredients = [
-    "CSS",
-    "JavaScript",
-    "Python",
-    "HTML",
-    "React",
-    "Node.js"
-];
+searchBox.addEventListener('input', function () {
+    const searchTerm = searchBox.value.toLowerCase();
+    const results = [];
 
-const resultsBox = document.querySelector('.result-box');
-const inputBox = document.getElementById('#search');
+    for (const category in ingredientList) {
+        const categoryItems = ingredientList[category];
 
-inputBox.addEventListener('input', function () {
-    let result = [];
-    let input = inputBox.value;
-    if (input.length) {
-        result = ingredients.filter((keyword) => {
-            return keyword.toLowerCase().includes(input.toLowerCase());
-        });
+        const matchingItems = categoryItems.filter(item => item.toLowerCase().includes(searchTerm));
+        
+        results.push(...matchingItems.map(matchingItem => ({ category, item: matchingItem })));
     }
-    display(result);
 
-    if (!result.length) {
-        resultsBox.style.display = 'none';
-    } else {
-        resultsBox.style.display = 'block';
-    }
+    displayResults(results);
 });
 
-function display(result) {
-    const content = result.map((item) => {
-        return `<li onclick="selectInput('${item}')">${item}</li>`;
+function displayResults(results) {
+    resultContainer.innerHTML = '';
+
+    results.forEach(result => {
+        const resultItem = document.createElement('div');
+        resultItem.classList.add('result-item');
+        resultItem.textContent = `${result.category}: ${result.item}`;
+
+        resultItem.addEventListener('click', function () {
+            searchBox.value = `${result.category}: ${result.item}`;
+            resultContainer.innerHTML = '';
+        });
+
+        resultContainer.appendChild(resultItem);
+        resultItem.style.display = 'block';
     });
-    resultsBox.innerHTML = `<ul>${content.join('')}</ul>`;
 }
 
-function selectInput(item) {
-    inputBox.value = item;
-    resultsBox.style.display = 'none';
-}
+
 
 
 // ----------------explore--------------------
