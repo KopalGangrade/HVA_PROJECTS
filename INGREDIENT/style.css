@@ -145,11 +145,18 @@ button{
 }
 
 #more{
+    height: 8vh;
+    width: 12vw;
     margin-left: 45vw;
     padding-bottom: 10vh;
     padding: 1vh;
     border: 2px solid black;
     cursor: pointer;
+}
+
+
+#info{
+    text-decoration: none;
 }
 
 #more:hover{

@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: rgb(225, 220, 225);
+}
 
 .box{
     width: 25vw;

@@ -41,34 +41,6 @@ btn1.addEventListener("click", function(){
 //   antibiotics:[700,...799]
 // }
 
-
-
-// const ingredientList = {
-//     flavorEnhancer: "MSG",
-//     color: "Caramel",
-//     preservatives: "Sodium Benzoate",
-//     antioxidants: "Vitamin C",
-//     antibiotics: "Penicillin"
-// };
-
-// function searchIngredients() {
-//     const searchInput = document.getElementById("searchInput").value.toLowerCase();
-//     const searchResultsDiv = document.getElementById("searchResults");
-//     searchResultsDiv.innerHTML = "";
-
-//     for (const prop in ingredientList) {
-//         const ingredient = ingredientList[prop].toLowerCase();
-//         if (ingredient.includes(searchInput)) {
-//             const resultItem = document.createElement("div");
-//             resultItem.textContent = `${prop}: ${ingredientList[prop]}`;
-//             searchResultsDiv.appendChild(resultItem);
-//         }
-//     }
-// }
-
-
-
-
 // const ingredientList = {
 //     "flavour enhancer": ["MSG", "Salt", "Sugar"],
 //     "color": ["Red", "Yellow", "Green"],
